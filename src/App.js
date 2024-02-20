@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import React from "react";
+import Header from "./components/header";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Logement from "./pages/logement";
+import Footer from "./components/footer";
+// import CarouselPage from "./components/carouselPage";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        {/* bar de navigation et logo */}
+        <Header
+          logoUrl="/images/LOGO.png"
+          homeLink="home"
+          homeText="Accueil"
+          aboutLink="about"
+          aboutText="A Propos"
+        />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/logement" element={<Logement />} />
+        </Routes>
+        {/*footer page d'accueil*/}
+        <Footer
+          imgFooter="/images/LOGO-footer.png"
+          titleFooter="© 2020 Kasa. All rights reserved"
+        />
+        {/* <Routes path="./components/carouselPage" component={CarouselPage} /> */}
+      </div>
+    </BrowserRouter>
   );
 }
 
