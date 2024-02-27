@@ -3,7 +3,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import data from "../Datas/data.json";
-
+import Carousel from "../components/carousel";
+import Equipement from "../components/equipement";
+import Description from "../components/description";
 function Accomodation() {
     const { id } = useParams();
      // Filtrer les données du logement en fonction de l'identifiant
@@ -25,6 +27,7 @@ function Accomodation() {
     return (
         <div>
             <section>
+                <Carousel/>
                 <div className="logement">
                     <div className="logement-title">
                         <h2>{logement.title}</h2>
@@ -43,6 +46,14 @@ function Accomodation() {
                     </ul>
                     <div>
                         <span className="etoile">{afficherEtoiles(logement.rating)}</span>
+                    </div>
+                </div>
+                <div className="content-liste">
+                    <div className="content-description">
+                        <Description/>
+                    </div>
+                    <div className="content-equipement">
+                        <Equipement/>
                     </div>
                 </div>
             </section>
