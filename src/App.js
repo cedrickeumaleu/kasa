@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./components/header";
 import Home from "./pages/home";
 import About from "./pages/about";
-import Logement from "./pages/logement";
+import Accommodation from "./pages/accommodation";
 import Footer from "./components/footer";
 // import CarouselPage from "./components/carouselPage";
 import "./App.css";
@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/logement" element={<Logement />} />
+          <Route path="/accommodation/:id" element={<Accommodation />} />
         </Routes>
         {/*footer page d'accueil*/}
         <Footer

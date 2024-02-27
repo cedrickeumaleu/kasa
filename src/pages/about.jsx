@@ -2,9 +2,26 @@ import React from "react";
 import Tetepage from "../components/en-tete";
 import Dropdown from "../components/dropdown";
 function About() {
+  const customStyle = {
+    filter: "none",
+  };
+
+  const customH1 = {
+    zIndex: "0",
+  };
+
+  const customCard = {
+    borderRadius: "10px",
+  };
+
   return (
     <div>
-      <Tetepage imageUrl="/images/apropo.png" />
+      <Tetepage
+        imageUrl="/images/apropo.png"
+        customStyle={customStyle}
+        customH1={customH1}
+        customCard={customCard}
+      />
       <section className="section-dropdown">
         <div>
           <Dropdown

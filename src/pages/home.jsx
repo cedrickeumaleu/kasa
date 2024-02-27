@@ -20,7 +20,12 @@ function Home() {
       <section className="section">
         <div className="articles">
           {data.slice().map((article, index) => (
-            <Carder key={index} image={article.cover} title={article.title} />
+            <Carder
+              key={index}
+              image={article.cover}
+              title={article.title}
+              id={article.id}
+            />
           ))}
         </div>
       </section>

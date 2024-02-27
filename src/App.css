@@ -154,5 +154,70 @@
 .dropdown-content .text{
   width: 70%;
   word-wrap: break-word;
-  
+  text-align: left;
+}
+/****style page logement***/
+.logement{
+  display: flex;
+  flex-direction: row;
+  margin: 0 30px;
+  justify-content: space-between;
+    align-items: center;
+}
+.hote{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.logement-title h2{
+  color: #ff6060;
+  size: 36px;
+  margin: 0;
+}
+.hote .hote-img{
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+}
+.hote .name-hote{
+  color: #ff6060;
+  padding-right: 8px;
+}
+.location{
+  margin: 0 30px;
+  display: flex;
+  margin-top: -10px;
+}
+.detail-logement{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px 30px;
+}
+.detail-logement ul{
+  display: flex;
+  flex-direction: row;
+  margin:0;
+  padding: 0;
+  list-style-type: none;
+}
+.detail-logement ul li{
+  background-color: #ff6060;
+  padding: 3px 5px;
+  margin-right: 10px;
+  color: white;
+}
+/***les étoiles**/
+.etoile{
+  font-size: 24px;
+}
+.etoile-remplie {
+  color: #ff6060; 
+  margin-left: 5px;
+}
+
+.etoile-vide {
+  color: #E3E3E3;
+  margin-left: 5px;
 }
