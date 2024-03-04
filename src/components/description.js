@@ -17,13 +17,13 @@ function Description() {
     <div className="description">
       <div className="description-title">
         <h2 className="">Description</h2>
-        <div
-          className={`chevron ${isOpen ? "open" : ""}`}
-          onClick={toggleDropdown}
-        >
-          <span>
-            <img src="/images/chevron-haut.png" alt="imgChevron" />
-          </span>
+        <div>
+          <img
+            className={`chevron ${isOpen ? "open" : ""}`}
+            onClick={toggleDropdown}
+            src="/images/chevron-haut.png"
+            alt="imgChevron"
+          />
         </div>
       </div>
       {isOpen && <p>{logement.description}</p>}

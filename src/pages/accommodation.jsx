@@ -28,26 +28,31 @@ function Accomodation() {
         <div>
             <section>
                 <Carousel/>
-                <div className="logement">
-                    <div className="logement-title">
+                <div className="content-logement">
+                    <div className="logement">
+                        <div className="logement-title">
                         <h2>{logement.title}</h2>
+                        <p className="location">{logement.location}</p>
+                        </div>
+                        <div className="detail-logement">
+                            <ul>
+                                {logement.tags.map((tag, index)=>(
+                                    <li key={index}>{tag}</li>
+                                ))}
+                            </ul>                
+                        </div>
                     </div>
-                    <div className="hote">
-                        <p className="name-hote">{logement.host.name}</p>
-                        <img className="hote-img" src={logement.host.picture} alt={logement.host.picture}/>
+                    <div className="col1">
+                        <div className="hote">
+                            <p className="name-hote">{logement.host.name}</p>
+                            <img className="hote-img" src={logement.host.picture} alt={logement.host.picture}/>
+                        </div>
+                        <div className="hote-etoile">
+                            <span className="etoile">{afficherEtoiles(logement.rating)}</span>
+                        </div>
                     </div>
                 </div>
-                <p className="location">{logement.location}</p>
-                <div className="detail-logement">
-                    <ul>
-                        {logement.tags.map((tag, index)=>(
-                            <li key={index}>{tag}</li>
-                        ))}
-                    </ul>
-                    <div>
-                        <span className="etoile">{afficherEtoiles(logement.rating)}</span>
-                    </div>
-                </div>
+               
                 <div className="content-liste">
                     <div className="content-description">
                         <Description/>

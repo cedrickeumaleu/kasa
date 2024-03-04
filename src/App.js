@@ -5,8 +5,10 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Accommodation from "./pages/accommodation";
 import Footer from "./components/footer";
+import Error from "./pages/error";
 // import CarouselPage from "./components/carouselPage";
-import "./App.css";
+// import "./App.css";
+import "./styles.scss";
 
 function App() {
   return (
@@ -21,9 +23,10 @@ function App() {
           aboutText="A Propos"
         />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/accommodation/:id" element={<Accommodation />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         {/*footer page d'accueil*/}
         <Footer

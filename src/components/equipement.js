@@ -17,13 +17,13 @@ function Equipement() {
     <div className="equipement">
       <div className="equipement-title">
         <h2 className="">Equipement</h2>
-        <div
-          className={`chevron ${isOpen ? "open" : ""}`}
-          onClick={toggleDropdown}
-        >
-          <span>
-            <img src="/images/chevron-haut.png" alt="imgChevron" />
-          </span>
+        <div>
+          <img
+            className={`chevron ${isOpen ? "open" : ""}`}
+            onClick={toggleDropdown}
+            src="/images/chevron-haut.png"
+            alt="imgChevron"
+          />
         </div>
       </div>
       {isOpen && (

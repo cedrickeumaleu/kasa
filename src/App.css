@@ -171,7 +171,6 @@
 }
 .logement-title h2{
   color: #ff6060;
-  size: 36px;
   margin: 0;
 }
 .hote .hote-img{
@@ -262,6 +261,7 @@
   color: white;
   font-size: 18px;
 }
+
 .equipement h2{
   font-size: 18px;
 }
@@ -317,11 +317,11 @@
   justify-content: space-between;
  
 }
-.previmage{
+.deplacement-img .previmage{
   cursor: pointer;
   margin-left: -24px;
 }
-.nextimage{ 
+.deplacement-img .nextimage{ 
   cursor: pointer;
   
 }

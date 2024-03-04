@@ -1,5 +1,9 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 function Header(props) {
+  const location = useLocation();
+  const { pathname } = location;
+
   return (
     <header className="header">
       <div className="logo-navbar">
@@ -7,21 +11,21 @@ function Header(props) {
           <img className="logo" src={props.logoUrl} alt="logo" />
         </div>
         <nav className="navbar">
-          <a
-            className="nav-link"
-            href={props.homeLink}
+          <Link
+            className={pathname === "/" ? "active" : ""}
+            to={"/"}
             rel="noopener noreferrer"
           >
             {props.homeText}
-          </a>
+          </Link>
 
-          <a
-            className="nav-link"
-            href={props.aboutLink}
+          <Link
+            className={pathname === "/about" ? "active" : ""}
+            to={"/" + props.aboutLink}
             rel="noopener noreferrer"
           >
             {props.aboutText}
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
