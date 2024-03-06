@@ -152,7 +152,8 @@
       }
       .dropdown-content {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        width: 70%;
         .text {
           width: 70%;
           word-wrap: break-word;
