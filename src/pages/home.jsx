@@ -5,10 +5,10 @@ function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Utilisez require() pour charger le fichier JSON localement
+    //  require() pour charger le fichier JSON localement
     const jsonData = require("../Datas/data.json");
     setData(jsonData);
-  }, []); // Utilise un tableau vide de dépendances pour exécuter cet effet une seule fois au montage
+  }, []); // Utilisation d'un tableau vide de dépendances pour exécuter cet effet une seule fois au montage
 
   return (
     <div>

@@ -6,11 +6,15 @@ import data from "../Datas/data.json";
 import Carousel from "../components/carousel";
 import Equipement from "../components/equipement";
 import Description from "../components/description";
+import Error from "./error";
 function Accomodation() {
     const { id } = useParams();
      // Filtrer les données du logement en fonction de l'identifiant
     const logement = data.find((logement) => logement.id === id);
-
+     // Condition pour afficher la page d'erreur si l'identifiant n'existe pas
+    if (!logement) {
+        return <Error />;
+    }
      // Fonction pour afficher les étoiles en fonction de la notation
      const afficherEtoiles = (rating) => {
         const nombreEtoiles = Math.min(parseInt(rating, 10), 5); // Limitez le nombre d'étoiles à 5

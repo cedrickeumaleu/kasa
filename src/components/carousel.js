@@ -5,6 +5,7 @@ import data from "../Datas/data.json";
 function Carousel() {
   const { id } = useParams();
   // Filtrer les données du logement en fonction de l'identifiant
+
   const logement = data.find((logement) => logement.id === id);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,6 +21,7 @@ function Carousel() {
       prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
     );
   };
+
   //condition qui permet d'afficher les boutons de navigation que si les images sont suppérieur à 1
   const showNavigation = logement.pictures.length > 1;
 
